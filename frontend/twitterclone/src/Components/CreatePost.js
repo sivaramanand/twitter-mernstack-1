@@ -18,7 +18,7 @@ const CreatePost = () => {
           <div>
             <Avatar
               src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-              size="50"
+              size="45"
               round={true}
             />
           </div>
