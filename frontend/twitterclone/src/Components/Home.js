@@ -1,12 +1,14 @@
+// Home.js
 import React from "react";
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
-import Feed from "./Feed";
+import { Outlet } from "react-router-dom"; 
+
 const Home = () => {
   return (
-    <div className="flex justify-between w-[80%] mx-auto ">
+    <div className="flex justify-between w-[80%] mx-auto">
       <LeftSide />
-      <Feed />
+      <Outlet />
       <RightSide />
     </div>
   );

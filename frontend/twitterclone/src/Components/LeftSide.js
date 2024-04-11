@@ -5,8 +5,9 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import { CiUser } from "react-icons/ci";
 import { CiBookmark } from "react-icons/ci";
 import { CiLogout } from "react-icons/ci";
-
+import {useNavigate} from "react-router-dom"
 const LeftSide = () => {
+  const navigate=useNavigate()
   return (
     <div className="w-[20%]">
       <div>
@@ -19,11 +20,11 @@ const LeftSide = () => {
           ></img>
         </div>
         <div className="my-4">
-          <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-300 hover:cursor-pointer rounded-full">
+          <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-300 hover:cursor-pointer rounded-full" onClick={()=>{navigate("/")}}>
             <div>
               <CiHome size={"35px"} />
             </div>
-            <h1 className="font-bold text-lg ml-2">Home</h1>
+            <h1 className="font-bold text-lg ml-2" >Home</h1>
           </div>
 
           <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-300 hover:cursor-pointer rounded-full">
@@ -38,11 +39,11 @@ const LeftSide = () => {
             </div>
             <h1 className="font-bold text-lg ml-2">Notification</h1>
           </div>
-          <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-300 hover:cursor-pointer rounded-full">
+          <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-300 hover:cursor-pointer rounded-full" onClick={()=>{navigate("/profile")}}>
             <div>
               <CiUser size={"35px"} />
             </div>
-            <h1 className="font-bold text-lg ml-2">Profile</h1>
+            <h1 className="font-bold text-lg ml-2" >Profile</h1>
           </div>
           <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-300 hover:cursor-pointer rounded-full">
             <div>
@@ -50,7 +51,7 @@ const LeftSide = () => {
             </div>
             <h1 className="font-bold text-lg ml-2">Bookmarks</h1>
           </div>
-          <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-300 hover:cursor-pointer rounded-full">
+          <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-300 hover:cursor-pointer rounded-full" onClick={()=>{navigate("/login")}}>
             <div>
               <CiLogout size={"35px"} />
             </div>
