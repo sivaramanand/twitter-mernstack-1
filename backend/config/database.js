@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
-import dotnev from "dotnev";
-
-dotnev.config({
+import dotenv from "dotenv";
+dotenv.config({
     path:"../config/.env"
 })
 const databaseConnection = () => {
@@ -11,6 +10,7 @@ const databaseConnection = () => {
       console.log("connected to mongoose");
     })
     .catch((error) => {
-      console.log(error);
+      console.log("not connected", error);
     });
 };
+export default databaseConnection;
